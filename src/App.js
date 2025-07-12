@@ -3,7 +3,7 @@ import LanguageCard from './components/LanguageCard';
 import MiniLanguageCard from './components/MiniLanguageCard';
 import StatsBarChart from './components/StatsBarChart';
 import GitHubChart from './components/GitHubChart';
-import { generateLanguageCardData } from './api';
+import { generateLanguageCardData } from './api/api';
 import { initialCardData } from './initialCardData';
 
 // --- Main App Component ---
