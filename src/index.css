@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px; /* Largura base */
+    height: 640px; /* Altura para proporção 5:8 (400 * 8/5) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 3px solid var(--card-color); /* Borda dinâmica */
+}
+.card-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 15px;
+    background: var(--card-gradient); /* Gradiente dinâmico */
+    border-bottom: 2px solid var(--card-header-border-color); /* Borda dinâmica */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+.card-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.language-logo-img { /* Estilo para a imagem da logo */
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Garante que a imagem caiba sem cortar */
+}
+.card-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    letter-spacing: 0.5px;
+}
+
+.card-type {
+    height: 100%;
+    width: 40%;
+    color: var(--card-type-text-color); /* Cor do texto dinâmica */
+    padding: 3px 8px;
+    border-radius: 0px 10px 0px 0px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.card-type::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-type-bg-color); /* Cor de fundo dinâmica para o pseudo-elemento */
+    transform: skewX(10deg);
+    transform-origin: top right;
+    z-index: -1;
+}
+
+
+.card-image-wrapper {
+    width: 100%;
+    height: 430px; /* Altura da imagem ajustada para a nova proporção */
+    overflow: hidden;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2e8f0;
+    flex-grow: 1;
+}
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.card-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    text-align: center;
+    padding: 5px 10px;
+    text-align: justify;
+    line-height: 1.2;
+    border-top: 1px solid var(--card-stats-border-color); /* Borda dinâmica */
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+.card-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 10px 30px 10px;
+    background-color: var(--card-stats-bg-color); /* Fundo dinâmico para stats */
+    border-top: 1px solid var(--card-stats-border-color); /* Borda dinâmica */
+    flex-wrap: nowrap; /* Manter em uma linha */
+    height: auto;
+    flex-shrink: 0;
+}
+.stat-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+    color: var(--card-stats-text-color); /* Cor do texto dinâmica */
+    flex-shrink: 0;
+}
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--card-stats-label-color); /* Cor do label dinâmica */
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+}
+.stat-value {
+    font-size: 0.9rem;
+    color: var(--card-stats-value-color); /* Cor do valor dinâmica */
+}
+.card-footer {
+    width: 100%;
+    padding: 8px 15px;
+    background-color: var(--card-color); /* Cor do rodapé dinâmica */
+    color: #ffffff;
+    font-size: 0.6rem;
+    text-align: right;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    flex-shrink: 0;
+}
+
+/* Mini-card specific styles */
+.mini-card-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90px; /* Approximately 1/4 of 400px */
+    height: 144px; /* Approximately 1/4 of 640px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--mini-card-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents shrinking */
+    margin: 5px; /* Spacing between mini-cards */
+}
+
+.mini-card-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mini-card-container.most-used-highlight {
+    border-color: #FFD700; /* Gold color for highlight */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05); /* Slightly larger */
+}
+
+.mini-card-header {
+    width: 100%;
+    height: 80%; /* Adjusted height for mini-card header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mini-card-gradient);
+    border-bottom: 1px solid var(--mini-card-header-border-color);
+    flex-shrink: 0;
+}
+
+.mini-language-logo-img {
+    width: 60px; /* Larger icon for mini-card */
+    height: 60px;
+    object-fit: contain;
+}
+
+.mini-card-name {
+    font-size: 0.8rem; /* Smaller font size for mini-card name */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 5px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the new bar chart container */
+.bar-chart-container-wrapper {
+    width: 100%;
+    height: 250px; /* Fixed height for the bar chart */
+    padding: 10px; /* Add some padding inside the container */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Responsive adjustments for main layout */
+@media (max-width: 767px) { /* Ajustes para telas menores que 768px (mobile) */
+    .content-display-area {
+        flex-direction: column; /* Empilhado em mobile */
+        align-items: center;
+        gap: 20px; /* Espaço entre as seções */
+    }
+    .card-and-stats-column, .charts-and-mini-cards-column {
+        width: 100%;
+        max-width: 400px; /* Limita a largura para mobile */
+    }
+    .chart-container-wrapper {
+        height: 400px; /* Altura fixa para o gráfico em mobile */
+    }
+    .card-container {
+        height: auto; /* Altura automática para mobile */
+    }
+    .mini-cards-container {
+        flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+        justify-content: center;
+        margin-top: 20px; /* Espaço entre o gráfico e os mini-cards */
+    }
+}
+
+@media (min-width: 768px) { /* Em telas maiores ou iguais a 768px (tablet e desktop), lado a lado */
+    .content-display-area {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start; /* Alinha itens ao topo */
+        gap: 30px; /* Espaço entre as duas colunas principais */
+    }
+    .card-and-stats-column {
+        flex: 0 0 400px; /* Largura fixa para esta coluna */
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espaço entre o card e o gráfico de barras */
+    }
+    .charts-and-mini-cards-column {
+        flex: 1; /* Ocupa o espaço restante */
+        max-width: 500px; /* Limite para não ficar muito largo */
+        min-height: 910px; /* Altura para alinhar com a coluna da esquerda (640 + 250 + 20) */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espaço entre o gráfico de radar e os mini-cards */
+    }
+    .chart-container-wrapper {
+        height: 460px; /* Aumentado para acomodar as tags e garantir espaço */
+        width: 100%;
+        padding: 30px 0px 30px 0px; /* Ajustado o padding */
+        display: flex; /* Torna o wrapper um flex container */
+        flex-direction: column; /* Empilha os itens verticalmente */
+    }
+    .chart-container-wrapper canvas { /* Estilo para o canvas dentro do wrapper */
+        height: 380px; /* Altura fixa para o canvas */
+        flex-shrink: 0; /* Impede que o canvas encolha */
+    }
+    .other-languages-tags {
+        min-height: 40px; /* Aumentar min-height para garantir espaço para as tags */
+        overflow: visible; /* Garantir que o conteúdo não seja cortado */
+        align-items: center;
+    }
+    .bar-chart-container-wrapper {
+        height: 250px; /* Altura do gráfico de barras */
+        width: 100%;
+    }
+    .mini-cards-container {
+        margin-top: 0; /* Reset margin as it's now in a column */
+        justify-content: flex-start; /* Alinha os mini-cards à esquerda na coluna */
+    }
+}
