@@ -1,5 +1,14 @@
 // --- Função para gerar dados de um novo card de linguagem usando a API Gemini ---
 export const generateLanguageCardData = async (languageName) => {
+  // A chave da API é lida de uma variável de ambiente.
+  // No Netlify, configure REACT_APP_GEMINI_API_KEY.
+  const apiKey = process.env.REACT_APP_GEMINI_API_KEY; // Alterado aqui
+
+  if (!apiKey) {
+    console.error("Chave da API do Gemini não configurada. Por favor, defina a variável de ambiente REACT_APP_GEMINI_API_KEY.");
+    return null; // Retorna null ou lança um erro se a chave não estiver presente
+  }
+
   const prompt = `Gere um objeto JSON para um 'DevCard' para a linguagem de programação/tecnologia '${languageName}'. O objeto deve seguir o formato abaixo, incluindo um 'prompt' para geração de imagem no estilo Pokémon de 1ª geração, com as cores e características da linguagem. Certifique-se de que o 'prompt' da imagem especifica um 'aspect ratio' levemente vertical retangular, próximo de 1:1 ou 4:5, e que o sujeito principal esteja bem enquadrado sem espaço vazio significativo.
 
   Exemplo de formato:
@@ -65,7 +74,6 @@ export const generateLanguageCardData = async (languageName) => {
     }
   };
 
-  const apiKey = ""; // Canvas will provide this at runtime
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
   try {

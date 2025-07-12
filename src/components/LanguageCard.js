@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getLogoPath } from '../utils/utils';
-import { initialCardData } from '../initialCardData'; // Importe initialCardData para fallback
+import { getLogoPath } from '../utils/getLogoPath';
+import { initialCardData } from '../initialCardData';
 
 const LanguageCard = ({ languageKey, cardData }) => {
-  const card = cardData[languageKey] || initialCardData['HTML']; // Fallback para HTML
+  const card = cardData[languageKey] || initialCardData['HTML'];
   const [cardImage, setCardImage] = useState('');
   const [loadingImage, setLoadingImage] = useState(true);
   const [imageError, setImageError] = useState(false);
@@ -13,8 +13,18 @@ const LanguageCard = ({ languageKey, cardData }) => {
       setLoadingImage(true);
       setImageError(false);
       try {
+        // A chave da API é lida de uma variável de ambiente.
+        // No Netlify, configure REACT_APP_GEMINI_API_KEY.
+        const apiKey = process.env.REACT_APP_GEMINI_API_KEY; // Alterado aqui
+
+        if (!apiKey) {
+          console.error("Chave da API do Gemini não configurada para geração de imagem. Por favor, defina a variável de ambiente REACT_APP_GEMINI_API_KEY.");
+          setImageError(true);
+          setLoadingImage(false);
+          return;
+        }
+
         const payload = { instances: { prompt: prompt }, parameters: { "sampleCount": 1 } };
-        const apiKey = ""; // API Key will be provided by Canvas runtime
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
 
         const response = await fetch(apiUrl, {
