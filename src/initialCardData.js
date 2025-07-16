@@ -315,4 +315,6 @@ export const initialCardData = {
     typeTextColor: '#2C3E50',
     statsBgColor: '#F0F4F8',
     statsBorderColor: '#AAB8C2',
-    statsLabelColor: '#33415
+    statsLabelColor: '#334155',
+    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a sleek, intelligent dolphin representing MySQL. The dolphin should be in a dynamic, powerful pose, perhaps leaping from a stylized ocean of data or interacting with glowing SQL query bubbles. Its design should subtly incorporate elements of the MySQL logo's blue and orange colors. The background should be a vibrant, interconnected digital ocean or a serene but active data realm, ensuring it. The overall aesthetic should be energetic, trustworthy, and suitable for a fantasy card game, with a focus on blues, whites, and subtle orange accents. High detail, sharp lines, epic feel."
+  },
