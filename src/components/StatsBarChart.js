@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import { statDisplayNames } from '../utils/utils'; // Caminho corrigido: agora importa de utils.js
+import { statDisplayNames } from '../utils/utils';
 
 const StatsBarChart = ({ stats, languageName }) => {
   const chartRef = useRef(null);
@@ -89,8 +89,9 @@ const StatsBarChart = ({ stats, languageName }) => {
   }, [stats, languageName]);
 
   return (
-    <div className="bar-chart-container-wrapper bg-white rounded-lg shadow-md flex flex-col items-center justify-center h-full p-4">
-      <canvas ref={chartRef} className="w-full h-full"></canvas>
+    // Removidas as classes Tailwind e adicionada 'stats-chart-wrapper'
+    <div className="stats-chart-wrapper">
+      <canvas ref={chartRef} className="chart-canvas"></canvas>
     </div>
   );
 };
