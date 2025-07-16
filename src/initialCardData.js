@@ -77,7 +77,7 @@ export const initialCardData = {
     statsBorderColor: '#c7d2fe',
     statsLabelColor: '#334155',
     statsValueColor: '#4f46e5',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a graceful and artistic chameleon or peacock representing CSS. The creature's skin or feathers should subtly shift colors and patterns, symbolizing dynamic styling and visual transformations. It could be interacting with abstract representations of cascading style sheets or glowing design elements. The background should be a vibrant, evolving visual landscape, showing elements transforming from basic shapes to beautifully styled interfaces. The main subject should be clearly visible and well-framed within a **slightly vertical rectangular aspect ratio, close to 1:1 or 4:5**, ensuring it fills the frame without significant empty space at the top or bottom. The overall aesthetic should be elegant, artistic, and suitable for a fantasy card game, with rich, harmonious colors and a sense of visual magic. High detail, sharp lines, epic feel."
+    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a graceful and artistic chameleon or peacock representing CSS. The creature's skin or feathers should subtly shift colors and patterns, symbolizing dynamic styling and visual transformations. It could be interacting with abstract representations of cascading style sheets or glowing design elements. The background should be a vibrant, evolving visual landscape, showing elements transforming from basic shapes to beautifully styled interfaces. The main subject should be clearly visible and well-framed within a **slightly vertical rectangular aspect ratio, close to 1:1 or 4:5**, ensuring it fills the frame without significant empty space at the top or bottom, and no parts are cut off at the edges. The overall aesthetic should be elegant, artistic, and suitable for a fantasy card game, with rich, harmonious colors and a sense of visual magic. High detail, sharp lines, epic feel."
   },
   'Tailwind CSS': {
     name: 'Tailwind CSS',
@@ -93,7 +93,7 @@ export const initialCardData = {
     statsBorderColor: '#a5f3fc',
     statsLabelColor: '#334155',
     statsValueColor: '#0891b2',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a nimble and efficient construction animal (e.g., a beaver or a ant) representing Tailwind CSS. The creature should be rapidly assembling glowing, abstract utility blocks or UI components, emphasizing speed and modularity. The background should be a clean, modern design grid or a blueprint, hinting at its utility-first approach. The main subject should be clearly visible and well-framed within a **slightly vertical rectangular aspect ratio, close to 1:1 or 4:5**, ensuring it fills the frame without significant empty space at the top or bottom. The overall aesthetic should be sleek, efficient, and suitable for a fantasy card game, with a focus on blues, purples, and grays. High detail, sharp lines, epic feel."
+    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a nimble and efficient construction animal (e.g., a beaver or a ant) representing Tailwind CSS. The creature should be rapidly assembling glowing, abstract utility blocks or UI components, emphasizing speed and modularity. The background should be a clean, modern design grid or a blueprint, hinting at its utility-first approach. The main subject should be clearly visible and well-framed within a **slightly vertical rectangular aspect ratio, close to 1:1 or 4:5**, ensuring it fills the frame without significant empty space at the top or bottom, and no parts are cut off at the edges. The overall aesthetic should be sleek, efficient, and suitable for a fantasy card game, with a focus on blues, purples, and grays. High detail, sharp lines, epic feel."
   },
   'Rust': {
     name: 'Rust',
@@ -315,88 +315,4 @@ export const initialCardData = {
     typeTextColor: '#2C3E50',
     statsBgColor: '#F0F4F8',
     statsBorderColor: '#AAB8C2',
-    statsLabelColor: '#334155',
-    statsValueColor: '#4A6572',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a highly stylized, intelligent spider or octopus representing the REST architectural style. The creature should be depicted as a 'Web Weaver' or 'Data Connector', with its limbs/tentacles intricately managing glowing data packets or interconnected nodes, symbolizing stateless communication and resource manipulation. It. The overall aesthetic should be dynamic, interconnected, and suitable for a fantasy card game, with a focus on blues, grays, and electric accents. High detail, sharp lines, epic feel."
-  },
-  'React': {
-    name: 'React',
-    type: 'UI Library',
-    description: 'A biblioteca de UI reativa, capaz de construir interfaces de usuário dinâmicas e de alta performance. Sua força reside na composição de componentes e no Virtual DOM.',
-    stats: { PWR: 85, VEL: 90, FLX: 95, COM: 99, CRV: 75 },
-    color: '#61DAFB',
-    gradient: 'linear-gradient(to right, #61DAFB, #90EEFF)',
-    cardHeaderBorderColor: '#007B8F',
-    typeBgColor: '#E0F7FA',
-    typeTextColor: '#1f2937',
-    statsBgColor: '#E0F7FA',
-    statsBorderColor: '#E0F7FA',
-    statsLabelColor: '#334155',
-    statsValueColor: '#00A3AD',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a nimble and reactive creature (e.g., a stylized chameleon or a fox) representing React. The creature's skin patterns should subtly shift and adapt, reflecting the dynamic nature of UI updates, and it should be interacting with glowing, interconnected geometric shapes symbolizing components and the Virtual DOM. It. The overall aesthetic should be dynamic, efficient, and suitable for a fantasy card game, with a focus on blues, whites, and subtle dark accents. High detail, sharp lines, epic feel."
-  },
-  'C++': {
-    name: 'C++',
-    type: 'Systems',
-    description: 'A linguagem de programação poderosa e eficiente, ideal para sistemas de alto desempenho e jogos. Sua força reside no controle de baixo nível, otimização e flexibilidade.',
-    stats: { PWR: 98, VEL: 95, FLX: 80, COM: 90, CRV: 40 },
-    color: '#00599C',
-    gradient: 'linear-gradient(to right, #00599C, #0088CC)',
-    cardHeaderBorderColor: '#004D80',
-    typeBgColor: '#B3D9FF',
-    typeTextColor: '#004D80',
-    statsBgColor: '#E0F2FF',
-    statsBorderColor: '#B3D9FF',
-    statsLabelColor: '#334155',
-    statsValueColor: '#003355',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a powerful and precise wolf or dragon representing C++. The creature should have subtle metallic or circuit-like patterns, symbolizing its close relation to hardware and high performance. It. The overall aesthetic should be strong, technical, and suitable for a fantasy card game, with a focus on dark blues, grays, and electric accents. High detail, sharp lines, epic feel."
-  },
-  'C#': {
-    name: 'C#',
-    type: 'Multi-paradigm',
-    description: 'A linguagem versátil e poderosa da plataforma .NET, conhecida por sua robustez, segurança e capacidade de construir uma vasta gama de aplicações, desde web até jogos.',
-    stats: { PWR: 90, VEL: 80, FLX: 85, COM: 95, CRV: 65 },
-    color: '#9D00FF',
-    gradient: 'linear-gradient(to right, #9D00FF, #C780FF)',
-    cardHeaderBorderColor: '#663399',
-    typeBgColor: '#B399CC',
-    typeTextColor: '#663399',
-    statsBgColor: '#E6D9F2',
-    statsBorderColor: '#B399CC',
-    statsLabelColor: '#334155',
-    statsValueColor: '#4D0080',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a powerful and sleek wolf representing C#. The wolf should have subtle glowing patterns on its fur resembling code lines or circuit traces, symbolizing its strong integration with the .NET ecosystem and its robust nature. It. The overall aesthetic should be strong, modern, and suitable for a fantasy card game, with a focus on purples, blues, and metallic accents. High detail, sharp lines, epic feel."
-  },
-  'Kotlin': {
-    name: 'Kotlin',
-    type: 'Cross-Platform',
-    description: 'A linguagem moderna e pragmática que roda na JVM e além, conhecida por sua concisão, segurança e interoperabilidade com Java. Ideal para desenvolvimento Android e backend.',
-    stats: { PWR: 88, VEL: 92, FLX: 90, COM: 85, CRV: 80 },
-    color: '#7F52FF',
-    gradient: 'linear-gradient(to right, #7F52FF, #B380FF)',
-    cardHeaderBorderColor: '#6330CC',
-    typeBgColor: '#E6D9F2',
-    typeTextColor: '#663399',
-    statsBgColor: '#E6D9F2',
-    statsBorderColor: '#B399CC',
-    statsLabelColor: '#334155',
-    statsValueColor: '#4D0080',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a sleek, intelligent, and agile fox representing Kotlin. The fox should have subtle geometric patterns on its fur that evoke Kotlin's logo, perhaps with glowing lines symbolizing code flow or interoperability. It. The overall aesthetic should be dynamic, concise, and suitable for a fantasy card game, with a focus on purples, oranges, and subtle white accents. High detail, sharp lines, epic feel."
-  },
-  'TypeScript': {
-    name: 'TypeScript',
-    type: 'Superset',
-    description: 'O guardião da tipagem, que adiciona segurança e escalabilidade ao JavaScript. Sua essência é a robustez e a clareza do código em grandes projetos.',
-    stats: { PWR: 75, VEL: 80, FLX: 90, COM: 90, CRV: 85 },
-    color: '#3178C6',
-    gradient: 'linear-gradient(to right, #3178C6, #5B9BD5)',
-    cardHeaderBorderColor: '#255D9A',
-    typeBgColor: '#A7D9F7',
-    typeTextColor: '#255D9A',
-    statsBgColor: '#E0F2FF',
-    statsBorderColor: '#A7D9F7',
-    statsLabelColor: '#334155',
-    statsValueColor: '#255D9A',
-    prompt: "a cartoony anime style illustration, 1st generation Pokemon style, featuring a wise, organized creature (e.g., a librarian owl or a meticulous scribe) representing TypeScript. The creature should be surrounded by glowing type annotations or structured code blocks, symbolizing its role in adding type safety to JavaScript. It. The overall aesthetic should be clear, robust, and suitable for a fantasy card game, with dominant blues and grays. High detail, sharp lines, epic feel."
-  }
-};
+    statsLabelColor: '#33415

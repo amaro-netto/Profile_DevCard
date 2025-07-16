@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import { statDisplayNames } from '../utils/utils';
+import { statDisplayNames } from '../utils/utils'; // Caminho corrigido: agora importa de utils.js
 
 const StatsBarChart = ({ stats, languageName }) => {
   const chartRef = useRef(null);

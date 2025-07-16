@@ -1,9 +1,9 @@
 import React from 'react';
-import { getLogoPath } from '../utils/utils';
-import { initialCardData } from '../initialCardData'; // Importe initialCardData para fallback
+import { getLogoPath } from '../utils/utils'; // Caminho corrigido: agora importa de utils.js
+import { initialCardData } from '../initialCardData';
 
 const MiniLanguageCard = ({ languageKey, percentage, isMostUsed, cardData }) => {
-  const card = cardData[languageKey] || initialCardData['HTML']; // Fallback para HTML
+  const card = cardData[languageKey] || initialCardData['HTML'];
   const logoPath = getLogoPath(card.name);
 
   return (

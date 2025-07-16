@@ -2,7 +2,7 @@
 export const generateLanguageCardData = async (languageName) => {
   // A chave da API é lida de uma variável de ambiente.
   // No Netlify, configure REACT_APP_GEMINI_API_KEY.
-  const apiKey = process.env.REACT_APP_GEMINI_API_KEY; // Alterado aqui
+  const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
 
   if (!apiKey) {
     console.error("Chave da API do Gemini não configurada. Por favor, defina a variável de ambiente REACT_APP_GEMINI_API_KEY.");
